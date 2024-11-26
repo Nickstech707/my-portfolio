@@ -30,7 +30,7 @@ const skills: Skill[] = [
       { 
         name: "Tailwind CSS", 
         proficiency: 95,
-        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
         description: "Rapid, responsive UI development"
       }
     ]
@@ -86,7 +86,7 @@ const skills: Skill[] = [
       { 
         name: "AWS", 
         proficiency: 85,
-        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg",
         description: "Cloud infrastructure and services"
       },
       { 
@@ -123,7 +123,7 @@ const skills: Skill[] = [
       { 
         name: "MQTT", 
         proficiency: 80,
-        logo: "https://mqtt.org/assets/img/mqtt-logo-transp.png",
+        logo: "https://mqtt.org/assets/downloads/mqtt-ver.png",
         description: "Real-time IoT communication"
       }
     ]
@@ -136,7 +136,7 @@ const skills: Skill[] = [
       {
         name: "Cisco",
         proficiency: 85,
-        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cisco/cisco-original.svg",
+        logo: "https://onepublishing.my.salesforce-sites.com/logotool/resource/1356227231000/logo",
         description: "Enterprise networking solutions"
       },
       {
@@ -148,13 +148,13 @@ const skills: Skill[] = [
       {
         name: "pfSense",
         proficiency: 75,
-        logo: "https://www.pfsense.org/img/logo-pfsense.png",
+        logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pfsense/pfsense-original-wordmark.svg",
         description: "Network security and firewall"
       },
       {
         name: "OpenVPN",
         proficiency: 85,
-        logo: "https://cdn.worldvectorlogo.com/logos/openvpn.svg",
+        logo: "https://openvpn.net/_next/static/media/open-vpn-logo.238dc4d9.svg",
         description: "Secure remote access solutions"
       }
     ]

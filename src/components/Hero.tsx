@@ -119,13 +119,12 @@ export default function Hero() {
 
             <div className="prose prose-invert max-w-2xl mx-auto space-y-4 text-gray-300">
               <p className="leading-relaxed">
-                With over 5 years of experience in software development, I specialize in creating innovative solutions 
+                With experience in software development, I specialize in creating innovative solutions 
                 that bridge the gap between technology and real-world challenges. My expertise spans from crafting 
                 elegant web applications to implementing complex IoT systems.
               </p>
               <p className="leading-relaxed">
-                Based in Nairobi, Kenya, I'm passionate about leveraging technology to solve African-specific challenges, 
-                particularly in fintech and agricultural technology. My work combines modern web technologies with 
+                Based in Nairobi, Kenya, I'm passionate about leveraging technology to solve challenges. My work combines modern web technologies with 
                 practical solutions that make a difference.
               </p>
             </div>
