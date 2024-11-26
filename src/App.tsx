@@ -1,4 +1,5 @@
 import { useBotpress } from './hooks/useBotpress';
+import { Analytics } from "@vercel/analytics/react"
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 import Hero from './components/Hero';
 import Skills from './components/Skills';
@@ -39,6 +40,7 @@ function App() {
         <Reviews />
         <MPesaDonation />
         <Footer />
+        <Analytics/>
       </div>
     </PayPalScriptProvider>
   );
