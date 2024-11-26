@@ -51,7 +51,7 @@ export const useBotpress = () => {
       }
     };
 
-    // Try to initialize immediately if scripts are already loaded
+   
     initBotpress();
 
     // If not loaded, wait for scripts to load
