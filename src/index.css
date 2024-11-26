@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased text-gray-900;
+  }
+}
+
+/* 3D Card Effect */
+.card-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+.card-3d:hover {
+  transform: translateZ(20px) rotateX(2deg) rotateY(2deg);
+}
+
+/* Glassmorphism */
+.glass {
+  @apply bg-white/80 backdrop-blur-lg;
+}
+
+/* Custom Animations */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin 15s linear infinite;
+}
+
+.animate-wave {
+  animation: wave 2.5s ease-in-out infinite;
+}
+
+.animate-tilt {
+  animation: tilt 10s infinite linear;
+}
+
+@keyframes tilt {
+  0%, 50%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(1deg);
+  }
+  75% {
+    transform: rotate(-1deg);
+  }
+}
+
+/* Gradient Text */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600;
+}
+
+/* 3D Button */
+.button-3d {
+  @apply relative transform transition-transform duration-200 active:translate-y-1;
+  box-shadow: 0 4px 0 0 theme('colors.blue.700');
+}
+
+.button-3d:active {
+  box-shadow: 0 0 0 0 theme('colors.blue.700');
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  /* width: 8px; */
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-blue-500 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-blue-600;
+}
+/* Botpress webchat customization */
+.bpw-widget-btn {
+  background: linear-gradient(to right, rgba(37, 99, 235, 0.85), rgba(16, 185, 129, 0.85)) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.bpw-widget-btn:hover {
+  background: linear-gradient(to right, rgba(29, 78, 216, 0.9), rgba(5, 150, 105, 0.9)) !important;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.bpw-header-container {
+  background: linear-gradient(to right, rgba(37, 99, 235, 0.95), rgba(16, 185, 129, 0.95)) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.bpw-chat-container {
+  background-color: rgba(249, 250, 251, 0.95) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+.bpw-from-bot .bpw-chat-bubble {
+  background-color: rgba(243, 244, 246, 0.95) !important;
+  border: 1px solid rgba(229, 231, 235, 0.5) !important;
+  color: #1f2937 !important;
+}
+
+.bpw-from-user .bpw-chat-bubble {
+  background: linear-gradient(to right, rgba(37, 99, 235, 0.9), rgba(16, 185, 129, 0.9)) !important;
+  color: white !important;
+  border: none !important;
+}
+
+.bpw-composer {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border-top: 1px solid rgba(229, 231, 235, 0.5) !important;
+}
+
+.bpw-button {
+  background: linear-gradient(to right, rgba(37, 99, 235, 0.9), rgba(16, 185, 129, 0.9)) !important;
+  color: white !important;
+}
+
+.bpw-button:hover {
+  background: linear-gradient(to right, rgba(29, 78, 216, 0.95), rgba(5, 150, 105, 0.95)) !important;
+} 
