@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Send, Loader2, AlertCircle } from 'lucide-react';
-import emailjs from '@emailjs/browser';
+import axios from 'axios';
 
 type NotificationType = {
   message: string;
@@ -25,14 +25,12 @@ export default function Contact() {
   const [notification, setNotification] = useState<NotificationType | null>(null);
 
   useEffect(() => {
-    // Load rate limit data from localStorage
     const lastEmailTime = localStorage.getItem('lastEmailTime');
     const emailCount = localStorage.getItem('emailCount');
 
     if (lastEmailTime) {
       const hourAgo = new Date().getTime() - 60 * 60 * 1000;
       if (Number(lastEmailTime) < hourAgo) {
-        // Reset if last email was sent more than an hour ago
         localStorage.setItem('emailCount', '0');
         setEmailsSentThisHour(0);
       } else {
@@ -41,7 +39,6 @@ export default function Contact() {
     }
   }, []);
 
-  // Handle notification timeout
   useEffect(() => {
     if (notification) {
       const timer = setTimeout(() => {
@@ -77,21 +74,9 @@ export default function Contact() {
     setIsSubmitting(true);
 
     try {
-      const templateParams = {
-        user_name: formData.name,
-        user_email: formData.email,
-        message: formData.message,
-        timestamp: new Date().toLocaleString()
-      };
+      const response = await axios.post('https://contact-server-jet.vercel.app/api/contact', formData);
 
-      const result = await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        templateParams,
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-      );
-
-      if (result.text === 'OK') {
+      if (response.status === 200) {
         const newCount = emailsSentThisHour + 1;
         localStorage.setItem('emailCount', String(newCount));
         localStorage.setItem('lastEmailTime', String(new Date().getTime()));

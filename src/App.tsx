@@ -10,6 +10,7 @@ import Services from './components/Services';
 import Contact from './components/Contact';
 import Reviews from './components/Reviews';
 import Footer from './components/Footer';
+import CertificationBadge from './components/CertificationBadge';
 import { init } from '@emailjs/browser';
 
 // Initialize EmailJS with your public key
@@ -39,6 +40,7 @@ function App() {
         <Contact />
         <Reviews />
         <MPesaDonation />
+        <CertificationBadge />
         <Footer />
         <Analytics/>
       </div>

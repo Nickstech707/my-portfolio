@@ -1,79 +1,78 @@
-import { Code2, Server, Database, Cloud, Smartphone, Shield, Cpu, LineChart, CreditCard, Receipt, MessageSquare, Cog, Lightbulb, Webhook, Palette, CloudCog, Network, Bot } from 'lucide-react';
+import { Code2, Server, Database,  Smartphone,   CreditCard, Receipt, MessageSquare, Cog, Lightbulb, Webhook, Palette, CloudCog, Network, Bot } from 'lucide-react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 const services = [
   {
     icon: <Code2 className="w-6 h-6" />,
     title: "Web Development",
-    description: "Custom web applications using React, Next.js, Vue.js, HTML5, CSS3, JavaScript, Vite, and Material UI",
+    description: "Transform your ideas into stunning web applications! I specialize in creating custom solutions using React, Next.js, Vue.js, HTML5, CSS3, JavaScript, Vite, and Material UI.",
   },
   {
     icon: <Smartphone className="w-6 h-6" />,
     title: "Mobile Development",
-    description: "Native and cross-platform mobile apps using React Native and Flutter",
+    description: "Bring your app to life! Whether it's native or cross-platform, I craft beautiful mobile experiences using React Native and Flutter.",
   },
   {
     icon: <Server className="w-6 h-6" />,
     title: "Backend Development",
-    description: "Scalable solutions with Node.js, Django, Spring Boot, SQLite, Flask, and MongoDB",
+    description: "Power your applications with robust backend solutions! I build scalable systems using Node.js, Django, Spring Boot, SQLite, Flask, and MongoDB.",
   },
   {
     icon: <Database className="w-6 h-6" />,
     title: "Database Design",
-    description: "Efficient database architecture using PostgreSQL, MongoDB, and Redis",
+    description: "Let’s create a solid foundation for your data! My efficient database architectures utilize PostgreSQL, MongoDB, and Redis to keep your information organized and accessible.",
   },
   {
     icon: <CreditCard className="w-6 h-6" />,
     title: "M-Pesa Integration",
-    description: "Seamless integration of M-Pesa payment solutions for businesses",
+    description: "Make payments a breeze! I seamlessly integrate M-Pesa payment solutions, ensuring your business transactions are smooth and secure.",
   },
   {
     icon: <Receipt className="w-6 h-6" />,
     title: "Billing Systems",
-    description: "Advanced billing systems for automated payment processing",
+    description: "Say goodbye to manual billing! Myadvanced billing systems automate payment processing, saving you time and reducing errors.",
   },
   {
     icon: <MessageSquare className="w-6 h-6" />,
     title: "Chatbot Integration",
-    description: "Intelligent chatbot development for customer service",
+    description: "Enhance your customer service with intelligent chatbots! I develop smart solutions that engage and assist your users 24/7.",
   },
   {
     icon: <Cog className="w-6 h-6" />,
     title: "Automation",
-    description: "Streamlining operations through custom automation solutions",
+    description: "Streamline your operations! My custom automation solutions help you save time and focus on what really matters.",
   },
   {
     icon: <Lightbulb className="w-6 h-6" />,
-    title: "Consulting & Training",
-    description: "Technical consulting and hands-on development workshops",
+    title: "Consulting",
+    description: "Need guidance? My technical consulting and hands-on development workshops empower you with the knowledge to succeed.",
   },
   {
     icon: <Webhook className="w-6 h-6" />,
     title: "API Development",
-    description: "Custom API creation and third-party integrations",
+    description: "Connect and integrate! I create custom APIs and facilitate third-party integrations to enhance your applications.",
   },
   {
     icon: <Palette className="w-6 h-6" />,
     title: "UI/UX Design",
-    description: "User-centered interface and experience design",
+    description: "Crafting delightful experiences! My user-centered design approach ensures your interface is not only beautiful but also intuitive.",
   },
   {
     icon: <CloudCog className="w-6 h-6" />,
     title: "Cloud Solutions",
-    description: "Cloud infrastructure on AWS, Vercel, and Render",
+    description: "Elevate your infrastructure! I provide cloud solutions on AWS, Vercel, and Render to ensure your applications are scalable and reliable.",
   },
   {
     icon: <Network className="w-6 h-6" />,
     title: "Networking Solutions",
-    description: "Network architecture, security, and infrastructure setup",
+    description: "Build a secure and efficient network! I design network architecture and infrastructure setups tailored to your needs.",
   },
   {
     icon: <Bot className="w-6 h-6" />,
     title: "AI Integration",
-    description: "Machine learning and AI solutions for business automation",
+    description: "Unlock the power of AI! I implement machine learning and AI solutions to automate processes and enhance your business operations.",
   }
 ];
-
 export default function Services() {
   const { elementRef, isVisible } = useIntersectionObserver();
 
@@ -117,7 +116,7 @@ export default function Services() {
                   }
                 `}
                 style={{ 
-                  transitionDelay: `${index * 100}ms`
+                  transitionDelay: `${index * 50}ms`
                 }}
               >
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 text-blue-600">
@@ -125,22 +124,10 @@ export default function Services() {
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
                 <p className="text-gray-600 flex-grow">{service.description}</p>
-                {/* <button className="mt-4 w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                  Learn More
-                </button> */}
               </div>
             );
           })}
         </div>
-{/* 
-        <div className="mt-16 text-center">
-          <a 
-            href="#contact"
-            className="inline-flex items-center space-x-2 bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            <span>Discuss Your Project</span>
-          </a>
-        </div> */}
       </div>
     </div>
   );

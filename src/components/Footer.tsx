@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Github, Linkedin, Mail, Phone, MapPin, ChevronRight, MessageSquare } from 'lucide-react';
 
 const quickLinks = [

@@ -13,12 +13,12 @@ const projects = [
     github: "#"
   },
   {
-    title: "IoT Fleet Management",
-    description: "Real-time vehicle tracking and analytics platform",
-    video: "https://customer-m9ql2nocxd2xph0j.cloudflarestream.com/195b3810a8e2d6ad36a6a7f4fdf0101b/manifest/video.m3u8",
-    thumbnail: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
-    tech: ["React Native", "Node.js", "MQTT", "AWS IoT", "LoRaWAN", "TensorFlow", "Raspberry Pi"],
-    link: "#",
+    title: "Remote Job Search",
+    description: "Built a scalable remote job search web app with Api integration",
+    video: "https://res.cloudinary.com/dzqt3usfp/video/upload/v1734454471/IMG_0076_efi3mh.mov",
+    thumbnail: "https://res.cloudinary.com/dzqt3usfp/image/upload/v1734453990/RemoHive_-_Google_Chrome_03_12_2024_22_08_08_v1sk9x.png",
+    tech: ["React", "IndexedDB", "PostgreSQL", "Jobicy API"],
+    link: "https://remohive.vercel.app",
     github: "#"
   },
   {
